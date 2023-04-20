@@ -27,7 +27,7 @@ graph TD
     C -->|download| D(fa:fa-file-csv CSV files)
 ```
 
-Obviously if you're only wanting the CSV file, run this thing, then download the artifact.  It's a zip file with the CSV file(s).  You're ready to rock and roll. :)
+Run this thing, then download the artifact.  It's a zip file with the CSV file(s).  You're ready to rock and roll. :)
 
 An example of use is below.  Note that the custom inputs, such as if you are wanting data on a different repo and need additional scopes for that, are set as environmental variables:
 
