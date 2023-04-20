@@ -31,15 +31,15 @@ jobs:
           name: ghas-data
       - name: Tiny http server moment  # Flat can only use HTTP or SQL, so ... yeah.
         run: |
-          docker run -d -p 8000:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/nginx-pid:/var/run -v $(pwd):/usr/share/nginx/html:ro nginx
+          sudo docker run -d -p 8000:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/nginx-pid:/var/run -v $(pwd):/usr/share/nginx/html:ro nginx
           sleep 10
       - name: Flat the code scanning alerts
-        uses: joshjohanning/flat@v3
+        uses: githubocto/flat@v3
         with:
           http_url: http://localhost:8000/cs_list.csv
           downloaded_filename: cs_list.csv
       - name: Flat the secret scanning alerts
-        uses: joshjohanning/flat@v3
+        uses: githubocto/flat@v3
         with:
           http_url: http://localhost:8000/secrets_list.csv
           downloaded_filename: secrets_list.csv
