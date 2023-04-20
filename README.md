@@ -18,7 +18,7 @@ CSV files are the dead-simple ingest point for a ton of other software services 
 
 ## How?
 
-This got a little more complicated than I'd like, but the tl;dr of what I'm trying to figure out is below:
+The tl;dr of what this is doing:
 
 ```mermaid
 graph TD
