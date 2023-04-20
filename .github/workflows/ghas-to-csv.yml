@@ -34,7 +34,7 @@ jobs:
           docker run -d -p 8000:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/nginx-pid:/var/run -v $(pwd):/usr/share/nginx/html:ro nginx
           sleep 10
       - name: Flat the code scanning alerts
-        uses: githubocto/flat@v3
+        uses: joshjohanning/flat@v3
         with:
           http_url: http://localhost:8000/cs_list.csv
           downloaded_filename: cs_list.csv
