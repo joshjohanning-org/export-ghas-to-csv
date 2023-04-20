@@ -39,7 +39,7 @@ jobs:
           http_url: http://localhost:8000/cs_list.csv
           downloaded_filename: cs_list.csv
       - name: Flat the secret scanning alerts
-        uses: githubocto/flat@v3
+        uses: joshjohanning/flat@v3
         with:
           http_url: http://localhost:8000/secrets_list.csv
           downloaded_filename: secrets_list.csv
