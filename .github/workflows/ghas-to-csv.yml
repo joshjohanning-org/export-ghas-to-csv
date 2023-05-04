@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: CSV export
-        uses: some-natalie/ghas-to-csv@v2
+        uses: advanced-security/ghas-to-csv@v2
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
           GITHUB_REPORT_SCOPE: "organization"
